@@ -1,6 +1,6 @@
-#Learn Ruby on rails
+# Learn Ruby on rails
 
-##Getting started
+## Getting started
 To get started with the app,clone the app and then install the needed gems
 
 $ bundle install --without production
