@@ -4,6 +4,7 @@ class UsersController < ApplicationController
     @user=User.new
   end
   def show
+    #debugger
     @user=User.find(params[:id])
   end
 
@@ -11,8 +12,10 @@ class UsersController < ApplicationController
     #@user=User.new(params[:user])
     @user=User.new(user_params)
     if @user.save
+      log_in @user
       flash[:success]="welcome to the Sample APp"
       redirect_to @user
+      #redirect_to login_url
     else
       render "new"
     end
