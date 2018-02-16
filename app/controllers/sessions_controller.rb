@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
   def new
+ #   debugger
     #debugger
   end
 
@@ -9,7 +10,9 @@ class SessionsController < ApplicationController
       log_in user
       params[:session][:remember_me]=="1" ? remeber(user) : forget(user)
       #redirect_to user
-      redirect_to user_path(user)
+      #redirect_to user_path(user)
+      #debugger
+      redirect_back_or(user)
     else
       flash.now[:danger]="Invalid email/password combination"
       render "new"

@@ -172,3 +172,21 @@ input {
   width:100%;
   margin-top:45px;
 }
+
+.users{
+  height: 300px;
+  overflow: auto;
+
+  margin: 0;
+  li{
+    overflow: hidden;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-lighter;
+    line-height: 50px;
+    //clear: both;
+  }
+  img{
+
+  }
+}
+

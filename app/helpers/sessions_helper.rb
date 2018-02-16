@@ -34,4 +34,21 @@ module SessionsHelper
     #!session[:user_id].nil?
     !current_user.nil?
   end
+
+  def current_user?(user)
+   #debugger
+    user==current_user
+  end
+
+  def store_location
+    session[:forwarding_url]=request.original_url if request.get?
+
+  end
+
+  def redirect_back_or(default)
+  #  debugger
+    redirect_to (session[:forwarding_url] || default)
+    session.delete(:forwarding_url)
+  end
+
 end
