@@ -1,0 +1,7 @@
+<%@feed_items.each do |feed_item|%>
+    <li>
+      <%link_to gravatar_for(current_user,size:50),user_path(feed_item.user)%>
+      <div><%=feed_item.content%></div>
+      <div><%=feed_item.created_at%></div>
+    </li>
+<%end%>

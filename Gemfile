@@ -7,6 +7,10 @@ gem 'faker'
 gem 'will_paginate'
 gem 'nokogiri'
 
+gem 'carrierwave',             '1.1.0'
+gem 'mini_magick',             '4.7.0'
+gem 'fog-aws',                 '2.0.0'
+
 gem 'bootstrap-sass', '~> 3.3.7'
 gem 'puma',         '3.9.1'
 gem 'sass-rails',   '5.0.6'
